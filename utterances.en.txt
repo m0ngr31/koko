@@ -1,0 +1,29 @@
+# A list of utterance variations written in a shorthand syntax
+
+# Syntax and information
+# http://www.makermusings.com/2015/07/21/defining-utterances-for-the-alexa-skills-kit/
+
+# Tool to expand the single line into the usable list of utterances
+# http://www.makermusings.com/amazon-echo-utterance-expander/
+
+
+StreamArtist play (music by/artist) {Artist}
+
+StreamAlbum play (/the) album {Album}
+StreamAlbum play (/the) album {Album} by {Artist}
+
+StreamSong play (/the) song {Song}
+StreamSong play (/the) song {Song} by {Artist}
+
+StreamAlbumOrSong play (/the) {Album} by {Artist}
+StreamAlbumOrSong play (/the) {Song} by {Artist}
+
+StreamAudioPlaylist play (/the) (song/music/audio/) playlist {AudioPlaylist}
+StreamAudioPlaylist play {AudioPlaylist} (song/music/audio/) playlist
+
+StreamAudioPlaylistRecent play recent (songs/music/audio/albums)
+StreamAudioPlaylistRecent play recently added (songs/music/audio/albums)
+
+StreamThis play (this/current playlist)
+
+StreamPartyMode play (/random/all/) music

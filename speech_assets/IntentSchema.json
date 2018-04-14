@@ -1,0 +1,74 @@
+{
+  "intents": [
+    {
+      "intent": "StreamArtist",
+      "slots": [
+        {
+          "name": "Artist",
+          "type": "MUSICARTISTS"
+        }
+      ]
+    },
+    {
+      "intent": "StreamAlbum",
+      "slots": [
+        {
+          "name": "Artist",
+          "type": "MUSICARTISTS"
+        },
+        {
+          "name": "Album",
+          "type": "MUSICALBUMS"
+        }
+      ]
+    },
+    {
+      "intent": "StreamSong",
+      "slots": [
+        {
+          "name": "Artist",
+          "type": "MUSICARTISTS"
+        },
+        {
+          "name": "Song",
+          "type": "MUSICSONGS"
+        }
+      ]
+    },
+    {
+      "intent": "StreamThis"
+    },
+    {
+      "intent": "StreamAlbumOrSong",
+      "slots": [
+        {
+          "name": "Artist",
+          "type": "MUSICARTISTS"
+        },
+        {
+          "name": "Album",
+          "type": "MUSICALBUMS"
+        },
+        {
+          "name": "Song",
+          "type": "MUSICSONGS"
+        }
+      ]
+    },
+    {
+      "intent": "StreamAudioPlaylist",
+      "slots": [
+        {
+          "name": "AudioPlaylist",
+          "type": "MUSICPLAYLISTS"
+        }
+      ]
+    },
+    {
+      "intent": "StreamAudioPlaylistRecent"
+    },
+    {
+      "intent": "StreamPartyMode"
+    }
+  ]
+}

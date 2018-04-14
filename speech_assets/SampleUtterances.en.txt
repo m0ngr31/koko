@@ -1,0 +1,39 @@
+StreamAlbum play album {Album}
+StreamAlbum play album {Album} by {Artist}
+StreamAlbum play the album {Album}
+StreamAlbum play the album {Album} by {Artist}
+StreamAlbumOrSong play the {Album} by {Artist}
+StreamAlbumOrSong play the {Song} by {Artist}
+StreamAlbumOrSong play {Album} by {Artist}
+StreamAlbumOrSong play {Song} by {Artist}
+StreamArtist play artist {Artist}
+StreamArtist play music by {Artist}
+StreamAudioPlaylist play audio playlist {AudioPlaylist}
+StreamAudioPlaylist play music playlist {AudioPlaylist}
+StreamAudioPlaylist play playlist {AudioPlaylist}
+StreamAudioPlaylist play song playlist {AudioPlaylist}
+StreamAudioPlaylist play the audio playlist {AudioPlaylist}
+StreamAudioPlaylist play the music playlist {AudioPlaylist}
+StreamAudioPlaylist play the playlist {AudioPlaylist}
+StreamAudioPlaylist play the song playlist {AudioPlaylist}
+StreamAudioPlaylist play {AudioPlaylist} audio playlist
+StreamAudioPlaylist play {AudioPlaylist} music playlist
+StreamAudioPlaylist play {AudioPlaylist} playlist
+StreamAudioPlaylist play {AudioPlaylist} song playlist
+StreamAudioPlaylistRecent play recent albums
+StreamAudioPlaylistRecent play recent audio
+StreamAudioPlaylistRecent play recent music
+StreamAudioPlaylistRecent play recent songs
+StreamAudioPlaylistRecent play recently added albums
+StreamAudioPlaylistRecent play recently added audio
+StreamAudioPlaylistRecent play recently added music
+StreamAudioPlaylistRecent play recently added songs
+StreamPartyMode play all music
+StreamPartyMode play music
+StreamPartyMode play random music
+StreamSong play song {Song}
+StreamSong play song {Song} by {Artist}
+StreamSong play the song {Song}
+StreamSong play the song {Song} by {Artist}
+StreamThis play current playlist
+StreamThis play this
