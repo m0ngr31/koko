@@ -7,7 +7,7 @@
 # http://www.makermusings.com/amazon-echo-utterance-expander/
 
 
-StreamArtist spiel(/e) (Musik von) {Artist}
+StreamArtist spiel(/e) (/Musik von) {Artist}
 
 StreamAlbum spiel(/e) (das Album/die CD/die Platte) {Album} (/von {Artist})
 

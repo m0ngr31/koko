@@ -40,8 +40,10 @@ StreamAlbumOrSong spiele {Album} von der Band {Artist}
 StreamAlbumOrSong spiele {Album} von der Gruppe {Artist}
 StreamAlbumOrSong spiele {Album} von {Artist}
 StreamAlbumOrSong spiele {Song} von {Artist}
-StreamArtist spiel (Musik von) {Artist}
-StreamArtist spiele (Musik von) {Artist}
+StreamArtist spiel Musik von {Artist}
+StreamArtist spiel {Artist}
+StreamArtist spiele Musik von {Artist}
+StreamArtist spiele {Artist}
 StreamAudioPlaylist spiel Lieder playlist {AudioPlaylist}
 StreamAudioPlaylist spiel Musik playlist {AudioPlaylist}
 StreamAudioPlaylist spiel Song playlist {AudioPlaylist}
