@@ -16,10 +16,6 @@ from functools import wraps
 from flask_ask import Ask, session, question, statement, audio, request, context
 from shutil import copyfile
 
-import sys
-sys.path.insert(0, "../kodi-voice")
-
-
 from kodi_voice import KodiConfigParser, Kodi
 
 
