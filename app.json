@@ -1,5 +1,5 @@
 {
-  "name": "Koko Skill",
+  "name": "Koko skill server",
   "description": "An Alexa still that let's you stream music from a Kodi box.",
   "repository": "https://github.com/m0ngr31/koko",
   "logo": "https://i.imgur.com/ZKLY7Ne.png",
@@ -38,7 +38,8 @@
     },
     "USE_PROXY": {
       "description": "Use shared free music proxy?",
-      "value": ""
+      "value": "",
+      "required": false
     },
     "ALT_PROXY": {
       "description": "",
