@@ -2,6 +2,10 @@
 ##   Response Templates   ##
 ############################
 
+streaming_album_card: "Playing album"
+
+streaming_recent_songs: "Playing recent songs"
+
 config_missing: "Could not find all the connection information I need. Please check your kodi.config file"
 
 hosted_config_missing: "Could not find all the connection information I need. Please update your information on app.media-dash-center.io"

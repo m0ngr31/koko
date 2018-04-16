@@ -15,6 +15,11 @@ from flask import Flask, json, render_template
 from functools import wraps
 from flask_ask import Ask, session, question, statement, audio, request, context
 from shutil import copyfile
+
+import sys
+sys.path.insert(0, "../kodi-voice")
+
+
 from kodi_voice import KodiConfigParser, Kodi
 
 
@@ -47,8 +52,6 @@ else:
   LANGUAGE = 'en'
   TEMPLATE_FILE = "templates.en.yaml"
 
-CAN_STREAM = music.has_music_functionality()
-
 # According to this: https://alexatutorial.com/flask-ask/configuration.html
 # Timestamp based verification shouldn't be used in production. Use at own risk
 # app.config['ASK_VERIFY_TIMESTAMP_DEBUG'] = True
@@ -72,6 +75,8 @@ def preflight_check(f):
 
       card_title = render_template('card_config_missing').encode('utf-8')
       return statement(response_text).simple_card(card_title, response_text)
+
+    CAN_STREAM = music.has_music_functionality(kodi)
 
     if not CAN_STREAM:
       response_text = render_template('cant_stream').encode("utf-8")
@@ -114,7 +119,7 @@ def alexa_stream_artist(kodi, Artist):
 
       if len(songs_array) > 0:
         random.shuffle(songs_array)
-        playlist_queue = music.MusicPlayer(songs_array)
+        playlist_queue = music.MusicPlayer(kodi, songs_array)
 
         response_text = render_template('streaming', heard_name=heard_artist).encode("utf-8")
         audio('').clear_queue(stop=True)
@@ -161,7 +166,7 @@ def alexa_stream_album(kodi, Album, Artist):
 
             if len(songs_array) > 0:
               random.shuffle(songs_array)
-              playlist_queue = music.MusicPlayer(songs_array)
+              playlist_queue = music.MusicPlayer(kodi, songs_array)
 
               response_text = render_template('streaming_album_artist', album_name=heard_album, artist=heard_artist).encode("utf-8")
               audio('').clear_queue(stop=True)
@@ -193,7 +198,7 @@ def alexa_stream_album(kodi, Album, Artist):
 
         if len(songs_array) > 0:
           random.shuffle(songs_array)
-          playlist_queue = music.MusicPlayer(songs_array)
+          playlist_queue = music.MusicPlayer(kodi, songs_array)
 
           response_text = render_template('streaming_album', album_name=heard_album).encode("utf-8")
           audio('').clear_queue(stop=True)
@@ -243,7 +248,7 @@ def alexa_stream_song(kodi, Song, Artist):
 
             if len(songs_array) > 0:
               random.shuffle(songs_array)
-              playlist_queue = music.MusicPlayer(songs_array)
+              playlist_queue = music.MusicPlayer(kodi, songs_array)
 
               response_text = render_template('streaming_song_artist', song_name=heard_song, artist=heard_artist).encode("utf-8")
               audio('').clear_queue(stop=True)
@@ -278,7 +283,7 @@ def alexa_stream_song(kodi, Song, Artist):
 
         if len(songs_array) > 0:
           random.shuffle(songs_array)
-          playlist_queue = music.MusicPlayer(songs_array)
+          playlist_queue = music.MusicPlayer(kodi, songs_array)
 
           response_text = render_template('streaming_song', song_name=heard_song).encode("utf-8")
           audio('').clear_queue(stop=True)
@@ -329,7 +334,7 @@ def alexa_stream_album_or_song(kodi, Song, Album, Artist):
 
           if len(songs_array) > 0:
             random.shuffle(songs_array)
-            playlist_queue = music.MusicPlayer(songs_array)
+            playlist_queue = music.MusicPlayer(kodi, songs_array)
 
             response_text = render_template('streaming_album_artist', album_name=heard_search, artist=heard_artist).encode("utf-8")
             audio('').clear_queue(stop=True)
@@ -356,7 +361,7 @@ def alexa_stream_album_or_song(kodi, Song, Album, Artist):
 
               if len(songs_array) > 0:
                 random.shuffle(songs_array)
-                playlist_queue = music.MusicPlayer(songs_array)
+                playlist_queue = music.MusicPlayer(kodi, songs_array)
 
                 response_text = render_template('streaming_song_artist', song_name=heard_search, artist=heard_artist).encode("utf-8")
                 audio('').clear_queue(stop=True)
@@ -396,7 +401,7 @@ def alexa_stream_recently_added_songs(kodi):
 
     if len(songs_array) > 0:
       random.shuffle(songs_array)
-      playlist_queue = music.MusicPlayer(songs_array)
+      playlist_queue = music.MusicPlayer(kodi, songs_array)
 
       response_text = render_template('streaming_recent_songs').encode("utf-8")
       audio('').clear_queue(stop=True)
@@ -431,7 +436,7 @@ def alexa_stream_audio_playlist(kodi, AudioPlaylist, shuffle=False):
     if len(songs_array) > 0:
       if shuffle:
         random.shuffle(songs_array)
-      playlist_queue = music.MusicPlayer(songs_array)
+      playlist_queue = music.MusicPlayer(kodi, songs_array)
 
       response_text = render_template('playing_playlist', action=op, playlist_name=heard_search).encode("utf-8")
       audio('').clear_queue(stop=True)
@@ -462,7 +467,7 @@ def alexa_stream_party_play(kodi):
 
     if len(songs_array) > 0:
       random.shuffle(songs_array)
-      playlist_queue = music.MusicPlayer(songs_array)
+      playlist_queue = music.MusicPlayer(kodi, songs_array)
 
       response_text = render_template('streaming_party').encode("utf-8")
       audio('').clear_queue(stop=True)
@@ -518,7 +523,7 @@ def alexa_stream_this(kodi):
         songs_array.append(kodi.PrepareDownload(song_detail['file']))
 
     if len(songs_array) > 0:
-      playlist_queue = music.MusicPlayer(songs_array)
+      playlist_queue = music.MusicPlayer(kodi, songs_array)
 
       kodi.Stop()
       kodi.ClearAudioPlaylist()
@@ -545,7 +550,7 @@ def alexa_stream_pause(kodi):
 @ask.intent('AMAZON.NextIntent')
 @preflight_check
 def alexa_stream_skip(kodi):
-  playlist_queue = music.MusicPlayer()
+  playlist_queue = music.MusicPlayer(kodi)
 
   if playlist_queue.next_item:
     playlist_queue.skip_song()
@@ -559,7 +564,7 @@ def alexa_stream_skip(kodi):
 @ask.intent('AMAZON.PreviousIntent')
 @preflight_check
 def alexa_stream_prev(kodi):
-  playlist_queue = music.MusicPlayer()
+  playlist_queue = music.MusicPlayer(kodi)
 
   if playlist_queue.prev_item:
     playlist_queue.prev_song()
@@ -573,7 +578,7 @@ def alexa_stream_prev(kodi):
 @ask.intent('AMAZON.StartOverIntent')
 @preflight_check
 def alexa_stream_restart_track(kodi):
-  playlist_queue = music.MusicPlayer()
+  playlist_queue = music.MusicPlayer(kodi)
 
   if playlist_queue.current_item:
     return audio('').play(playlist_queue.current_item, offset=0)
@@ -627,7 +632,8 @@ def alexa_stream_resume(kodi):
 # This allows for Next Intents and on_playback_finished requests to trigger the step
 @ask.on_playback_nearly_finished()
 def nearly_finished():
-  playlist_queue = music.MusicPlayer()
+  kodi = Kodi(config, context)
+  playlist_queue = music.MusicPlayer(kodi)
 
   if playlist_queue.next_item:
     return audio().enqueue(playlist_queue.next_item)
@@ -635,7 +641,8 @@ def nearly_finished():
 
 @ask.on_playback_finished()
 def play_back_finished():
-  playlist_queue = music.MusicPlayer()
+  kodi = Kodi(config, context)
+  playlist_queue = music.MusicPlayer(kodi)
 
   if playlist_queue.next_item:
     playlist_queue.skip_song()
@@ -648,7 +655,8 @@ def started(offset):
 
 @ask.on_playback_stopped()
 def stopped(offset):
-  playlist_queue = music.MusicPlayer()
+  kodi = Kodi(config, context)
+  playlist_queue = music.MusicPlayer(kodi)
 
   playlist_queue.current_offset = offset
   playlist_queue.save_to_mongo()

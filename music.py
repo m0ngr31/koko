@@ -1,16 +1,16 @@
 import os
 
-def has_music_functionality():
+def has_music_functionality(kodi):
   try:
     import pymongo
   except:
     return False
 
   accepted_answers = ['y', 'yes', 'Y', 'Yes', 'YES', 'true', 'True']
-  accepted_warning = os.getenv('ACCEPT_MUSIC_WARNING')
+  accepted_warning = kodi.config.get(kodi.dev_cfg_section, 'accept_music_warning')
 
   if accepted_warning in accepted_answers:
-    if os.getenv('MONGODB_URI'):
+    if kodi.config.get(kodi.dev_cfg_section, 'mongodb_uri'):
       return True
     else:
       return False
@@ -18,9 +18,9 @@ def has_music_functionality():
     return False
 
 class MusicPlayer:
-  def __init__(self, urls=[]):
+  def __init__(self, kodi=None, urls=[]):
     from pymongo import MongoClient
-    self.mongo_uri = os.getenv('MONGODB_URI')
+    self.mongo_uri = kodi.config.get(kodi.dev_cfg_section, 'mongodb_uri')
     self.client = MongoClient(self.mongo_uri)
 
     database_name = self.mongo_uri.rsplit('/', 1)[1]
