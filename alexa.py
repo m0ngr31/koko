@@ -75,7 +75,7 @@ def preflight_check(f):
     CAN_STREAM = music.has_music_functionality(kodi)
 
     if not CAN_STREAM:
-      response_text = render_template('cant_stream').encode("utf-8")
+      response_text = render_template('config_missing').encode("utf-8")
       return statement(response_text)
 
     # Since we're not getting any of the actual args passed in, we have to create them here
@@ -415,7 +415,7 @@ def alexa_stream_audio_playlist(kodi, AudioPlaylist, shuffle=False):
   if shuffle:
     op = render_template('shuffling_empty').encode("utf-8")
   else:
-    op = render_template('streaming_empty').encode("utf-8")
+    op = render_template('playing').encode("utf-8")
 
   card_title = render_template('action_audio_playlist', action=op).encode("utf-8")
   log.info(card_title)
