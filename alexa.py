@@ -447,6 +447,7 @@ def alexa_stream_audio_playlist(kodi, AudioPlaylist, shuffle=False):
 
 # Handle the StreamPartyMode intent.
 @ask.intent('StreamPartyMode')
+@preflight_check
 def alexa_stream_party_play(kodi):
   card_title = render_template('streaming_party_mode').encode("utf-8")
   log.info(card_title)
