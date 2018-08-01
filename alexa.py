@@ -104,7 +104,8 @@ def alexa_stream_artist(kodi, Artist):
     artists_list = artists['result']['artists']
     located = kodi.matchHeard(heard_artist, artists_list, 'artist')
 
-    if located:
+    if len(located):
+      located = located[0]
       songs_result = kodi.GetArtistSongsPath(located['artistid'])
       songs = songs_result['result']['songs']
 
@@ -145,13 +146,15 @@ def alexa_stream_album(kodi, Album, Artist):
       artists_list = artists['result']['artists']
       located = kodi.matchHeard(heard_artist, artists_list, 'artist')
 
-      if located:
+      if len(located):
+        located = located[0]
         albums = kodi.GetArtistAlbums(located['artistid'])
         if 'result' in albums and 'albums' in albums['result']:
           albums_list = albums['result']['albums']
           album_located = kodi.matchHeard(heard_album, albums_list)
 
-          if album_located:
+          if len(album_located):
+            album_located = album_located[0]
             songs_result = kodi.GetAlbumSongsPath(album_located['albumid'])
             songs = songs_result['result']['songs']
 
@@ -183,7 +186,8 @@ def alexa_stream_album(kodi, Album, Artist):
       albums_list = albums['result']['albums']
       album_located = kodi.matchHeard(heard_album, albums_list)
 
-      if album_located:
+      if len(album_located):
+        album_located = album_located[0]
         songs_result = kodi.GetAlbumSongsPath(album_located['albumid'])
         songs = songs_result['result']['songs']
 
@@ -224,13 +228,15 @@ def alexa_stream_song(kodi, Song, Artist):
       artists_list = artists['result']['artists']
       located = kodi.matchHeard(heard_artist, artists_list, 'artist')
 
-      if located:
+      if len(located):
+        located = located[0]
         songs = kodi.GetArtistSongs(located['artistid'])
         if 'result' in songs and 'songs' in songs['result']:
           songs_list = songs['result']['songs']
           song_located = kodi.matchHeard(heard_song, songs_list)
 
-          if song_located:
+          if len(song_located):
+            song_located = song_located[0]
             songs_array = []
             song = None
 
@@ -265,7 +271,8 @@ def alexa_stream_song(kodi, Song, Artist):
       songs_list = songs['result']['songs']
       song_located = kodi.matchHeard(heard_song, songs_list)
 
-      if song_located:
+      if len(song_located):
+        song_located = song_located[0]
         songs_array = []
         song = None
 
@@ -313,13 +320,15 @@ def alexa_stream_album_or_song(kodi, Song, Album, Artist):
     artists_list = artists['result']['artists']
     located = kodi.matchHeard(heard_artist, artists_list, 'artist')
 
-    if located:
+    if len(located):
+      located = located[0]
       albums = kodi.GetArtistAlbums(located['artistid'])
       if 'result' in albums and 'albums' in albums['result']:
         albums_list = albums['result']['albums']
         album_located = kodi.matchHeard(heard_search, albums_list)
 
-        if album_located:
+        if len(album_located):
+          album_located = album_located[0]
           songs_result = kodi.GetAlbumSongsPath(album_located['albumid'])
           songs = songs_result['result']['songs']
 
@@ -343,7 +352,8 @@ def alexa_stream_album_or_song(kodi, Song, Album, Artist):
             songs_list = songs['result']['songs']
             song_located = kodi.matchHeard(heard_search, songs_list)
 
-            if song_located:
+            if len(song_located):
+              song_located = song_located[0]
               songs_array = []
               song = None
 
@@ -522,7 +532,7 @@ def alexa_stream_this(kodi):
     if len(songs_array) > 0:
       playlist_queue = music.MusicPlayer(kodi, songs_array)
 
-      kodi.Stop()
+      kodi.PlayerStop()
       kodi.ClearAudioPlaylist()
 
       response_text = render_template('transferring_stream').encode("utf-8")
@@ -536,10 +546,13 @@ def alexa_stream_this(kodi):
 
 
 @ask.intent('AMAZON.PauseIntent')
-@preflight_check
-def alexa_stream_pause(kodi):
-  audio('').clear_queue()
+def alexa_stream_pause():
   return audio('').stop()
+
+
+@ask.intent('AMAZON.StopIntent')
+def stop():
+  return audio('stopping').clear_queue(stop=True)
 
 
 # NextIntent steps queue forward and clears enqueued streams that were already sent to Alexa
@@ -584,16 +597,28 @@ def alexa_stream_restart_track(kodi):
     return audio(response_text)
 
 
+# I couldn't get audio('').resume() to work reliably, so just doing it manually
 @ask.intent('AMAZON.ResumeIntent')
 @preflight_check
 def alexa_stream_resume(kodi):
-  return audio('').resume()
+  playlist_queue = music.MusicPlayer(kodi)
+
+  if playlist_queue.current_item:
+    return audio('').play(playlist_queue.current_item, offset=playlist_queue.current_offset)
+  else:
+    response_text = render_template('no_current_song').encode("utf-8")
+    return audio(response_text)
+
+
+# Handle the AMAZON.CancelIntent intent.
+@ask.intent('AMAZON.CancelIntent')
+def alexa_cancel():
+  return statement('')
 
 
 # Handle the AMAZON.LoopOnIntent intent.
 # @ask.intent('AMAZON.LoopOnIntent')
-# @preflight_check
-# def alexa_loop_on(kodi):
+# def alexa_loop_on():
 #   card_title = render_template('loop_enable').encode('utf-8')
 #   log.info(card_title)
 
@@ -614,9 +639,8 @@ def alexa_stream_resume(kodi):
 
 
 # Handle the AMAZON.LoopOffIntent intent.
-# @ask.intent('AMAZON.LoopOffIntent')
 # @preflight_check
-# def alexa_loop_off(kodi):
+# def alexa_loop_off():
 #   card_title = render_template('loop_disable').encode('utf-8')
 #   log.info(card_title)
 
@@ -657,7 +681,6 @@ def stopped(offset):
 
   playlist_queue.current_offset = offset
   playlist_queue.save_to_mongo()
-  audio().enqueue(playlist_queue.current_item)
   log.info('Streaming stopped')
 
 
@@ -697,8 +720,7 @@ def get_help_samples(limit=7):
 
 
 @ask.intent('AMAZON.HelpIntent')
-@preflight_check
-def prepare_help_message(kodi):
+def prepare_help_message():
   sample_utterances = get_help_samples()
 
   response_text = render_template('help', example=sample_utterances.popitem()[1]).encode('utf-8')
