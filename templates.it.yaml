@@ -62,21 +62,21 @@ welcome: "Benvenuto nell'app Koko"
 ##  Card Title Templates  ##
 ############################
 
-streaming_album_card: "Playing album"
+streaming_album_card: "Album in riproduzione"
 
-card_config_missing: "Invalid configuration"
+card_config_missing: "Configurazione errata"
 
-stream_artist: "Playing songs by {{ heard_artist }}"
+stream_artist: "Brani di {{ heard_artist }} in riproduzione"
 
-streaming_album_card: "Playing album"
+streaming_album_card: "Album in riproduzione"
 
-streaming_song_card: "Playing song"
+streaming_song_card: "Brano in riproduzione"
 
 streaming_album_or_song: "Playing album or song"
 
-streaming_party_mode: "Party Mode"
+streaming_party_mode: "Modalità party"
 
-streaming_current_playlist: "Playing current playlist"
+streaming_current_playlist: "Playlist attuale in riproduzione"
 
 help_card: "Help"
 
@@ -85,10 +85,10 @@ help_card: "Help"
 ##   General Templates    ##
 ############################
 
-no_more_songs: "There are no more songs in the queue"
+no_more_songs: "Non ci sono altri brani in coda"
 
-no_songs_history: "There are no songs in your playlist history"
+no_songs_history: "Non ci sono altri brani nella tua cronologia degli ascolti"
 
-no_current_song: "There is no current song"
+no_current_song: "Non ci sono brani in riproduzione"
 
-playing: "playing"
+playing: "In riproduzione"
