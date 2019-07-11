@@ -1,0 +1,94 @@
+############################
+##   Response Templates   ##
+############################
+
+streaming_recent_songs: "Riproduco i brani recenti"
+
+config_missing: "Non riesco a configurare la connessione. Per favore, controlla il file kodi.config"
+
+streaming: "Riproduco i brani di {{ heard_name }}"
+
+could_not_find: "Non riesco a trovare {{ heard_name }}"
+
+streaming_album_artist: "Riproduco l'album {{ album_name }} di {{ artist }}"
+
+could_not_find_album_artist: "Non riesco a trovare {{ album_name }} di {{ artist }}"
+
+streaming_album: "Riproduco l'album {{ album_name }}"
+
+could_not_find_album: "Non riesco a trovare l'album {{ album_name }}"
+
+streaming_song_artist: "Riproduco {{ song_name }} di {{ artist }}"
+
+could_not_find_song_artist: "Non riesco a trovare {{ song_name }} di {{ artist }}"
+
+streaming_song: "Riproduco {{ song_name }}"
+
+could_not_find_song: "Non riesco a trovare {{ song_name }}"
+
+no_recent_songs: "Non ci sono brani recenti"
+
+shuffling_empty: "Riproduzione casuale"
+
+action_audio_playlist: "{{ action }} la playlist audio"
+
+playing_playlist_audio: "{{ action }} la playlist audio {{ playlist_name }}"
+
+could_not_find_playlist: "Non riesco a trovare la playlist {{ heard_name }}"
+
+streaming_party: "Riproduco in modalità party"
+
+error_parsing_results: "Errore nel parsing dei risultati"
+
+transferring_stream: "Riproduco il flusso su Alexa"
+
+nothing_currently_playing: "Kodi non sta riproducendo nulla al momento"
+
+help: "Cosa vuoi fare? Prova a dire qualcosa come, {{ example }}"
+
+help_short: "Prova a dire qualcosa come, {{ example }}"
+
+help_text: "Koko ti permette di riprodurre musica dal tuo server Kodi. Ecco alcune cose che puoi dire:\n
+\xa0\n
+{{ examples }}
+\xa0\n
+Per una lista completa delle funzionalità supportate consulta il file README su Github (https://github.com/m0ngr31/koko/README.md)."
+
+welcome: "Benvenuto nell'app Koko"
+
+
+
+############################
+##  Card Title Templates  ##
+############################
+
+streaming_album_card: "Playing album"
+
+card_config_missing: "Invalid configuration"
+
+stream_artist: "Playing songs by {{ heard_artist }}"
+
+streaming_album_card: "Playing album"
+
+streaming_song_card: "Playing song"
+
+streaming_album_or_song: "Playing album or song"
+
+streaming_party_mode: "Party Mode"
+
+streaming_current_playlist: "Playing current playlist"
+
+help_card: "Help"
+
+
+############################
+##   General Templates    ##
+############################
+
+no_more_songs: "There are no more songs in the queue"
+
+no_songs_history: "There are no songs in your playlist history"
+
+no_current_song: "There is no current song"
+
+playing: "playing"

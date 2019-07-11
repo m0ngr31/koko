@@ -1,0 +1,41 @@
+# A list of utterance variations written in a shorthand syntax
+
+# Syntax and information
+# http://www.makermusings.com/2015/07/21/defining-utterances-for-the-alexa-skills-kit/
+
+# Tool to expand the single line into the usable list of utterances
+# http://www.makermusings.com/amazon-echo-utterance-expander/
+
+
+StreamArtist riproduci (i brani di/lecanzoni di) {Artist}
+StreamArtist metti (i brani di/le canzoni di) {Artist}
+
+StreamAlbum riproduci (/l'album) {Album}
+StreamAlbum riproduci (/l'album) {Album} di {Artist}
+StreamAlbum metti (/l'album) {Album}
+StreamAlbum metti (/l'album) {Album} di {Artist}
+
+StreamSong riproduci (/il brano/la canzone) {Song}
+StreamSong riproduci (/il brano/la canzone) {Song} di {Artist}
+StreamSong metti (/il brano/la canzone) {Song}
+StreamSong metti (/il brano/la canzone) {Song} di {Artist}
+
+StreamAlbumOrSong riproduci (/l'album) {Album} di {Artist}
+StreamAlbumOrSong metti (/l'album) {Album} di {Artist}
+StreamAlbumOrSong riproduci (/il brano/la canzone) {Song} by {Artist}
+StreamAlbumOrSong metti (/il brano/la canzone) {Song} by {Artist}
+
+StreamAudioPlaylist play (/the) (song/music/audio/) playlist {AudioPlaylist}
+StreamAudioPlaylist play {AudioPlaylist} (song/music/audio/) playlist
+
+StreamAudioPlaylistRecent riproduci (i brani/la musica/i file audio/gli album) recenti
+StreamAudioPlaylistRecent riproduci (i brani/la musica/i file audio/gli album) aggiunti recentemente
+StreamAudioPlaylistRecent metti (i brani/la musica/i file audio/gli album) recenti
+StreamAudioPlaylistRecent metti (i brani/la musica/i file audio/gli album) aggiunti recentemente
+
+StreamThis riproduci (questo/la playlist attuale)
+
+StreamPartyMode riproduci (brani/canzoni) casuali
+StreamPartyMode riproduci la (/mia) raccolta musicale
+StreamPartyMode metti (brani/canzoni) casuali
+StreamPartyMode metti la (/mia) raccolta musicale
