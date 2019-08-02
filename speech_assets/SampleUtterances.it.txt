@@ -1,8 +1,3 @@
-# A list of utterance variations written in a shorthand syntax
-# Syntax and information
-# Tool to expand the single line into the usable list of utterances
-# http://www.makermusings.com/amazon-echo-utterance-expander/
-# http://www.makermusings.com/two thousand fifteen/seven/twenty one/defining-utterances-for-the-alexa-skills-kit/
 StreamAlbum metti l'album {Album}
 StreamAlbum metti l'album {Album} di {Artist}
 StreamAlbum metti {Album}
