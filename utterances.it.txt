@@ -22,8 +22,8 @@ StreamSong metti (/il brano/la canzone) {Song} di {Artist}
 
 StreamAlbumOrSong riproduci (/l'album) {Album} di {Artist}
 StreamAlbumOrSong metti (/l'album) {Album} di {Artist}
-StreamAlbumOrSong riproduci (/il brano/la canzone) {Song} by {Artist}
-StreamAlbumOrSong metti (/il brano/la canzone) {Song} by {Artist}
+StreamAlbumOrSong riproduci (/il brano/la canzone) {Song} di {Artist}
+StreamAlbumOrSong metti (/il brano/la canzone) {Song} di {Artist}
 
 StreamAudioPlaylist riproduci la playlist playlist {AudioPlaylist}
 StreamAudioPlaylist metti la playlist {AudioPlaylist}
