@@ -19,7 +19,7 @@ StreamAlbumOrSong riproduci {Song} di {Artist}
 StreamArtist metti i brani di {Artist}
 StreamArtist metti le canzoni di {Artist}
 StreamArtist riproduci i brani di {Artist}
-StreamArtist riproduci lecanzoni di {Artist}
+StreamArtist riproduci le canzoni di {Artist}
 StreamAudioPlaylist metti la playlist {AudioPlaylist}
 StreamAudioPlaylist riproduci la playlist {AudioPlaylist}
 StreamAudioPlaylistRecent metti gli album aggiunti recentemente
