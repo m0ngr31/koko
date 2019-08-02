@@ -1,3 +1,8 @@
+# A list of utterance variations written in a shorthand syntax
+# Syntax and information
+# Tool to expand the single line into the usable list of utterances
+# http://www.makermusings.com/amazon-echo-utterance-expander/
+# http://www.makermusings.com/two thousand fifteen/seven/twenty one/defining-utterances-for-the-alexa-skills-kit/
 StreamAlbum metti l'album {Album}
 StreamAlbum metti l'album {Album} di {Artist}
 StreamAlbum metti {Album}
@@ -6,22 +11,22 @@ StreamAlbum riproduci l'album {Album}
 StreamAlbum riproduci l'album {Album} di {Artist}
 StreamAlbum riproduci {Album}
 StreamAlbum riproduci {Album} di {Artist}
-StreamAlbumOrSong metti il brano {Song} by {Artist}
+StreamAlbumOrSong metti il brano {Song} di {Artist}
 StreamAlbumOrSong metti l'album {Album} di {Artist}
-StreamAlbumOrSong metti la canzone {Song} by {Artist}
+StreamAlbumOrSong metti la canzone {Song} di {Artist}
 StreamAlbumOrSong metti {Album} di {Artist}
-StreamAlbumOrSong metti {Song} by {Artist}
-StreamAlbumOrSong riproduci il brano {Song} by {Artist}
+StreamAlbumOrSong metti {Song} di {Artist}
+StreamAlbumOrSong riproduci il brano {Song} di {Artist}
 StreamAlbumOrSong riproduci l'album {Album} di {Artist}
-StreamAlbumOrSong riproduci la canzone {Song} by {Artist}
+StreamAlbumOrSong riproduci la canzone {Song} di {Artist}
 StreamAlbumOrSong riproduci {Album} di {Artist}
-StreamAlbumOrSong riproduci {Song} by {Artist}
+StreamAlbumOrSong riproduci {Song} di {Artist}
 StreamArtist metti i brani di {Artist}
 StreamArtist metti le canzoni di {Artist}
 StreamArtist riproduci i brani di {Artist}
 StreamArtist riproduci lecanzoni di {Artist}
 StreamAudioPlaylist metti la playlist {AudioPlaylist}
-StreamAudioPlaylist riproduci la playlist playlist {AudioPlaylist}
+StreamAudioPlaylist riproduci la playlist {AudioPlaylist}
 StreamAudioPlaylistRecent metti gli album aggiunti recentemente
 StreamAudioPlaylistRecent metti gli album recenti
 StreamAudioPlaylistRecent metti i brani aggiunti recentemente
