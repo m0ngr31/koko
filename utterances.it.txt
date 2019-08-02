@@ -7,7 +7,7 @@
 # http://www.makermusings.com/amazon-echo-utterance-expander/
 
 
-StreamArtist riproduci (i brani di/lecanzoni di) {Artist}
+StreamArtist riproduci (i brani di/le canzoni di) {Artist}
 StreamArtist metti (i brani di/le canzoni di) {Artist}
 
 StreamAlbum riproduci (/l'album) {Album}
