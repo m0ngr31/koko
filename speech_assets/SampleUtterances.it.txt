@@ -1,0 +1,67 @@
+# A list of utterance variations written in a shorthand syntax
+# Syntax and information
+# Tool to expand the single line into the usable list of utterances
+# http://www.makermusings.com/amazon-echo-utterance-expander/
+# http://www.makermusings.com/two thousand fifteen/seven/twenty one/defining-utterances-for-the-alexa-skills-kit/
+StreamAlbum metti l'album {Album}
+StreamAlbum metti l'album {Album} di {Artist}
+StreamAlbum metti {Album}
+StreamAlbum metti {Album} di {Artist}
+StreamAlbum riproduci l'album {Album}
+StreamAlbum riproduci l'album {Album} di {Artist}
+StreamAlbum riproduci {Album}
+StreamAlbum riproduci {Album} di {Artist}
+StreamAlbumOrSong metti il brano {Song} by {Artist}
+StreamAlbumOrSong metti l'album {Album} di {Artist}
+StreamAlbumOrSong metti la canzone {Song} by {Artist}
+StreamAlbumOrSong metti {Album} di {Artist}
+StreamAlbumOrSong metti {Song} by {Artist}
+StreamAlbumOrSong riproduci il brano {Song} by {Artist}
+StreamAlbumOrSong riproduci l'album {Album} di {Artist}
+StreamAlbumOrSong riproduci la canzone {Song} by {Artist}
+StreamAlbumOrSong riproduci {Album} di {Artist}
+StreamAlbumOrSong riproduci {Song} by {Artist}
+StreamArtist metti i brani di {Artist}
+StreamArtist metti le canzoni di {Artist}
+StreamArtist riproduci i brani di {Artist}
+StreamArtist riproduci lecanzoni di {Artist}
+StreamAudioPlaylist metti la playlist {AudioPlaylist}
+StreamAudioPlaylist riproduci la playlist playlist {AudioPlaylist}
+StreamAudioPlaylistRecent metti gli album aggiunti recentemente
+StreamAudioPlaylistRecent metti gli album recenti
+StreamAudioPlaylistRecent metti i brani aggiunti recentemente
+StreamAudioPlaylistRecent metti i brani recenti
+StreamAudioPlaylistRecent metti i file audio aggiunti recentemente
+StreamAudioPlaylistRecent metti i file audio recenti
+StreamAudioPlaylistRecent metti la musica aggiunti recentemente
+StreamAudioPlaylistRecent metti la musica recenti
+StreamAudioPlaylistRecent riproduci gli album aggiunti recentemente
+StreamAudioPlaylistRecent riproduci gli album recenti
+StreamAudioPlaylistRecent riproduci i brani aggiunti recentemente
+StreamAudioPlaylistRecent riproduci i brani recenti
+StreamAudioPlaylistRecent riproduci i file audio aggiunti recentemente
+StreamAudioPlaylistRecent riproduci i file audio recenti
+StreamAudioPlaylistRecent riproduci la musica aggiunti recentemente
+StreamAudioPlaylistRecent riproduci la musica recenti
+StreamPartyMode metti brani casuali
+StreamPartyMode metti canzoni casuali
+StreamPartyMode metti la mia raccolta musicale
+StreamPartyMode metti la raccolta musicale
+StreamPartyMode riproduci brani casuali
+StreamPartyMode riproduci canzoni casuali
+StreamPartyMode riproduci la mia raccolta musicale
+StreamPartyMode riproduci la raccolta musicale
+StreamSong metti il brano {Song}
+StreamSong metti il brano {Song} di {Artist}
+StreamSong metti la canzone {Song}
+StreamSong metti la canzone {Song} di {Artist}
+StreamSong metti {Song}
+StreamSong metti {Song} di {Artist}
+StreamSong riproduci il brano {Song}
+StreamSong riproduci il brano {Song} di {Artist}
+StreamSong riproduci la canzone {Song}
+StreamSong riproduci la canzone {Song} di {Artist}
+StreamSong riproduci {Song}
+StreamSong riproduci {Song} di {Artist}
+StreamThis riproduci la playlist attuale
+StreamThis riproduci questo

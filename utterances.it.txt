@@ -25,8 +25,8 @@ StreamAlbumOrSong metti (/l'album) {Album} di {Artist}
 StreamAlbumOrSong riproduci (/il brano/la canzone) {Song} by {Artist}
 StreamAlbumOrSong metti (/il brano/la canzone) {Song} by {Artist}
 
-StreamAudioPlaylist play (/the) (song/music/audio/) playlist {AudioPlaylist}
-StreamAudioPlaylist play {AudioPlaylist} (song/music/audio/) playlist
+StreamAudioPlaylist riproduci la playlist playlist {AudioPlaylist}
+StreamAudioPlaylist metti la playlist {AudioPlaylist}
 
 StreamAudioPlaylistRecent riproduci (i brani/la musica/i file audio/gli album) recenti
 StreamAudioPlaylistRecent riproduci (i brani/la musica/i file audio/gli album) aggiunti recentemente
