@@ -1,3 +1,4 @@
+pip < 10.0.0
 gunicorn
 flask-ask>=0.9.8
 kodi-voice>=1.1.1
