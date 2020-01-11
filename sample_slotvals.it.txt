@@ -1,0 +1,18 @@
+Addon YouTube
+MovieGenre Commedia
+Movie Tropic Thunder
+Artist Daniele Silvestri
+Album Monetine
+MusicGenre Pop
+AudioPlaylist Vacanza
+Song Frasi da dimenticare
+Show Farscape
+VideoPlaylist Video HD
+ShowGenre Fantascienza
+MusicVideoGenre Pop
+MusicVideo a-ha MTV Unplugged
+Volume sessantacinque
+Season due
+Episode otto
+ForwardDur un minuto
+BackwardDur 30 secondi
