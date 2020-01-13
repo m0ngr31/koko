@@ -42,8 +42,10 @@ if SKILL_ID and SKILL_ID != 'None' and not os.getenv('MEDIA_CENTER_SKILL_ID'):
   app.config['ASK_APPLICATION_ID'] = SKILL_ID
 
 LANGUAGE = config.get('global', 'language')
-if LANGUAGE and LANGUAGE != 'None' and LANGUAGE == 'de':
+if LANGUAGE == 'de':
   TEMPLATE_FILE = "templates.de.yaml"
+elif LANGUAGE == 'it':
+  TEMPLATE_FILE = "templates.it.yaml"
 else:
   LANGUAGE = 'en'
   TEMPLATE_FILE = "templates.en.yaml"

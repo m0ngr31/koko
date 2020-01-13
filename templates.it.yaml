@@ -1,0 +1,92 @@
+############################
+##   Response Templates   ##
+############################
+
+streaming_recent_songs: "Brani recenti in riproduzione"
+
+config_missing: "Non sono riuscita a trovare Tutte le informazioni di connessione a me necessarie. Ti prego di verificare il file kodi.config"
+
+streaming: "Brani di {{ heard_name }} in riproduzione"
+
+could_not_find: "Non sono riuscita a trovare {{ heard_name }}"
+
+streaming_album_artist: "Album {{ album_name }} di {{ artist }} in riproduzione"
+
+could_not_find_album_artist: "Non sono riuscita a trovare l'album {{ album_name }} di {{ artist }}"
+
+streaming_album: "Album {{ album_name }} in riproduzione"
+
+could_not_find_album: "Non sono riuscita a trovare l'album {{ album_name }}"
+
+streaming_song_artist: "{{ song_name }} di {{ artist }} in riproduzione"
+
+could_not_find_song_artist: "Non sono riuscita a trovare {{ song_name }} di {{ artist }}"
+
+streaming_song: "{{ song_name }} in riproduzione"
+
+could_not_find_song: "Non sono riuscita a trovare {{ song_name }}"
+
+no_recent_songs: "Non ci sono brani recenti"
+
+shuffling_empty: "Riproduzione casuale"
+
+action_audio_playlist: "{{ action }} playlist audio"
+
+playing_playlist_audio: "{{ action }} la playlist audio {{ playlist_name }}"
+
+could_not_find_playlist: "Non sono riuscita a trovare una playlist chiamata {{ heard_name }}"
+
+streaming_party: "Modalità party in corso"
+
+error_parsing_results: "Errore nella verifica del risultato"
+
+transferring_stream: "Trasferimento stream ad Alexa"
+
+nothing_currently_playing: "Kodi non sta riproducendo musica in questo momento"
+
+help: "Cosa desideri fare? Prova qualcosa come {{ example }}"
+
+help_short: "Prova qualcosa come {{ example }}"
+
+help_text: "Koko ti permette di trasmettere musica dal tuo server Kodi. Ecco qualche esempio di frase da usare:\n
+\xa0\n
+{{ examples }}
+\xa0\n
+Per una lista completa di richieste supportate, leggi il file README su Github (https://github.com/m0ngr31/koko/README.md)."
+
+welcome: "Benvenuti a Koko"
+
+
+
+############################
+##  Card Title Templates  ##
+############################
+
+streaming_album_card: "Album in riproduzione"
+
+card_config_missing: "Configurazione non valida"
+
+stream_artist: "Brani di {{ heard_artist }} in riproduzione"
+
+streaming_song_card: "Brano in riproduzione"
+
+streaming_album_or_song: "Album o brano in riproduzione"
+
+streaming_party_mode: "Modalità Party"
+
+streaming_current_playlist: "Playlist in riproduzione"
+
+help_card: "Aiuto"
+
+
+############################
+##   General Templates    ##
+############################
+
+no_more_songs: "Non ci sono altri brani nella coda"
+
+no_songs_history: "Non ci sono altri brani nella cronologia della playlist"
+
+no_current_song: "Non c'è un brano in riproduzione"
+
+playing: "in riproduzione"
