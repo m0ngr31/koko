@@ -2,4 +2,3 @@ gunicorn
 git+git://github.com/johnwheeler/flask-ask@master#egg=flask-ask
 kodi-voice>=1.1.1
 pymongo
-pip == 18.0
