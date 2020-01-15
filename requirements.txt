@@ -1,4 +1,5 @@
 gunicorn
 git+git://github.com/johnwheeler/flask-ask@master#egg=flask-ask
-kodi-voice>=1.1.1
+#kodi-voice>=1.1.1
+git+git://github.com/succo69/kodi-voice@master#egg=kodi-voice
 pymongo
