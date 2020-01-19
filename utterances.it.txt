@@ -22,7 +22,8 @@ StreamAudioPlaylist (suona/metti (/su)/esegui) (/la) playlist (/musicale/audio/d
 
 StreamAudioPlaylistRecent (suona/metti (/su)/esegui) (brani/canzoni/album) recenti
 StreamAudioPlaylistRecent (suona/metti (/su)/esegui) (musica/audio) recente
-StreamAudioPlaylistRecent (suona/metti (/su)/esegui) (brani/canzoni/album/pezzi) aggiunti (di recente/recentemente/da poco) 
+StreamAudioPlaylistRecent (suona/metti (/su)/esegui) (brani/album/pezzi) aggiunti (di recente/recentemente/da poco) 
+StreamAudioPlaylistRecent (suona/metti (/su)/esegui) canzoni aggiunte (di recente/recentemente/da poco) 
 StreamAudioPlaylistRecent (suona/metti (/su)/esegui) musica aggiunta (di recente/recentemente/da poco) 
 StreamAudioPlaylistRecent (suona/metti (/su)/esegui) audio aggiunto (di recente/recentemente/da poco) 
 
