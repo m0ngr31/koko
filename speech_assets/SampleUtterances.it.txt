@@ -1,3 +1,8 @@
+# A list of utterance variations written in a shorthand syntax
+# Syntax and information
+# Tool to expand the single line into the usable list of utterances
+# http://www.makermusings.com/amazon-echo-utterance-expander/
+# http://www.makermusings.com/two thousand fifteen/seven/twenty one/defining-utterances-for-the-alexa-skills-kit/
 StreamAlbum esegui album {Album}
 StreamAlbum esegui album {Album} degli {Artist}
 StreamAlbum esegui album {Album} dei {Artist}
@@ -130,9 +135,9 @@ StreamAudioPlaylistRecent esegui brani aggiunti da poco
 StreamAudioPlaylistRecent esegui brani aggiunti di recente
 StreamAudioPlaylistRecent esegui brani aggiunti recentemente
 StreamAudioPlaylistRecent esegui brani recenti
-StreamAudioPlaylistRecent esegui canzoni aggiunti da poco
-StreamAudioPlaylistRecent esegui canzoni aggiunti di recente
-StreamAudioPlaylistRecent esegui canzoni aggiunti recentemente
+StreamAudioPlaylistRecent esegui canzoni aggiunte da poco
+StreamAudioPlaylistRecent esegui canzoni aggiunte di recente
+StreamAudioPlaylistRecent esegui canzoni aggiunte recentemente
 StreamAudioPlaylistRecent esegui canzoni recenti
 StreamAudioPlaylistRecent esegui musica aggiunta da poco
 StreamAudioPlaylistRecent esegui musica aggiunta di recente
@@ -153,9 +158,9 @@ StreamAudioPlaylistRecent metti brani aggiunti da poco
 StreamAudioPlaylistRecent metti brani aggiunti di recente
 StreamAudioPlaylistRecent metti brani aggiunti recentemente
 StreamAudioPlaylistRecent metti brani recenti
-StreamAudioPlaylistRecent metti canzoni aggiunti da poco
-StreamAudioPlaylistRecent metti canzoni aggiunti di recente
-StreamAudioPlaylistRecent metti canzoni aggiunti recentemente
+StreamAudioPlaylistRecent metti canzoni aggiunte da poco
+StreamAudioPlaylistRecent metti canzoni aggiunte di recente
+StreamAudioPlaylistRecent metti canzoni aggiunte recentemente
 StreamAudioPlaylistRecent metti canzoni recenti
 StreamAudioPlaylistRecent metti musica aggiunta da poco
 StreamAudioPlaylistRecent metti musica aggiunta di recente
@@ -176,9 +181,9 @@ StreamAudioPlaylistRecent metti su brani aggiunti da poco
 StreamAudioPlaylistRecent metti su brani aggiunti di recente
 StreamAudioPlaylistRecent metti su brani aggiunti recentemente
 StreamAudioPlaylistRecent metti su brani recenti
-StreamAudioPlaylistRecent metti su canzoni aggiunti da poco
-StreamAudioPlaylistRecent metti su canzoni aggiunti di recente
-StreamAudioPlaylistRecent metti su canzoni aggiunti recentemente
+StreamAudioPlaylistRecent metti su canzoni aggiunte da poco
+StreamAudioPlaylistRecent metti su canzoni aggiunte di recente
+StreamAudioPlaylistRecent metti su canzoni aggiunte recentemente
 StreamAudioPlaylistRecent metti su canzoni recenti
 StreamAudioPlaylistRecent metti su musica aggiunta da poco
 StreamAudioPlaylistRecent metti su musica aggiunta di recente
@@ -199,9 +204,9 @@ StreamAudioPlaylistRecent suona brani aggiunti da poco
 StreamAudioPlaylistRecent suona brani aggiunti di recente
 StreamAudioPlaylistRecent suona brani aggiunti recentemente
 StreamAudioPlaylistRecent suona brani recenti
-StreamAudioPlaylistRecent suona canzoni aggiunti da poco
-StreamAudioPlaylistRecent suona canzoni aggiunti di recente
-StreamAudioPlaylistRecent suona canzoni aggiunti recentemente
+StreamAudioPlaylistRecent suona canzoni aggiunte da poco
+StreamAudioPlaylistRecent suona canzoni aggiunte di recente
+StreamAudioPlaylistRecent suona canzoni aggiunte recentemente
 StreamAudioPlaylistRecent suona canzoni recenti
 StreamAudioPlaylistRecent suona musica aggiunta da poco
 StreamAudioPlaylistRecent suona musica aggiunta di recente
