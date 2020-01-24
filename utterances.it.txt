@@ -7,22 +7,26 @@
 # http://www.makermusings.com/amazon-echo-utterance-expander/
 
 
-StreamArtist (metti/suona/metti su/esegui) musica (di/dei/degli/delle) {Artist}
+StreamArtist (suona/metti (/su)/esegui) musica (di/dei/degli/delle) {Artist}
 
-StreamAlbum (metti/suona/metti su/esegui) (/l') album {Album}
-StreamAlbum (metti/suona/metti su/esegui) (/l') album {Album} (di/dei/degli\delle) {Artist}
+StreamAlbum (suona/metti (/su)/esegui) (/l') album {Album}
+StreamAlbum (suona/metti (/su)/esegui) (/l') album {Album} (di/dei/degli/delle) {Artist}
 
-StreamSong (metti/suona/metti su/esegui) (/il/la) (canzone/brano/pezzo) {Song}
-StreamSong (metti/suona/metti su/esegui) (/il/la) (canzone/brano/pezzo) {Song} (di/dei/degli\delle) {Artist}
+StreamSong (suona/metti (/su)/esegui) (/il) (brano/pezzo) {Song} (/(di/dei/degli/delle) {Artist})
+StreamSong (suona/metti (/su)/esegui) (/la) canzone {Song} (/(di/dei/degli/delle) {Artist})
 
-StreamAlbumOrSong (metti/suona/metti su/esegui) {Album} (di/dei/degli/delle) {Artist}
-StreamAlbumOrSong (metti/suona/metti su/esegui) {Song} (di/dei/degli/delle) {Artist}
+StreamAlbumOrSong (suona/metti (/su)/esegui) {Album} (di/dei/degli/delle) {Artist}
+StreamAlbumOrSong (suona/metti (/su)/esegui) {Song} (di/dei/degli/delle) {Artist}
 
-StreamAudioPlaylist (metti/suona/metti su/esegui) (/la) playlist (/musicale/audio/di canzoni/) {AudioPlaylist}
+StreamAudioPlaylist (suona/metti (/su)/esegui) (/la) playlist (/musicale/audio/di canzoni/) {AudioPlaylist}
 
-StreamAudioPlaylistRecent (metti/suona/metti su/esegui) (brani/canzoni/musica/audio/album) recent(i/e)
-StreamAudioPlaylistRecent (metti/suona/metti su/esegui) (brani/canzoni/musica/audio/album) aggiunt(i/e/o/a) (di recente/recentemente/da poco) 
+StreamAudioPlaylistRecent (suona/metti (/su)/esegui) (brani/canzoni/album) recenti
+StreamAudioPlaylistRecent (suona/metti (/su)/esegui) (musica/audio) recente
+StreamAudioPlaylistRecent (suona/metti (/su)/esegui) (brani/album/pezzi) aggiunti (di recente/recentemente/da poco) 
+StreamAudioPlaylistRecent (suona/metti (/su)/esegui) canzoni aggiunte (di recente/recentemente/da poco) 
+StreamAudioPlaylistRecent (suona/metti (/su)/esegui) musica aggiunta (di recente/recentemente/da poco) 
+StreamAudioPlaylistRecent (suona/metti (/su)/esegui) audio aggiunto (di recente/recentemente/da poco) 
 
-StreamThis (metti/suona/metti su/esegui) (questo/la playlist)
+StreamThis (suona/metti (/su)/esegui) (questo/la playlist)
 
-StreamPartyMode (metti/suona/metti su/esegui) (/tutta la) musica (/a caso)
+StreamPartyMode (suona/metti (/su)/esegui) (/tutta la) musica (/a caso)
